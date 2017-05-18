@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Gabriela', serif;
+}
+
+* {
+    font-family: 'Gabriela', serif;
+    line-height: 1.15;
+}
+
+body {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.footer, .header {
+    background-color: black;
+    color: olivedrab;
+}
+
+.logo {
+    border: 2px solid olivedrab;
+    border-radius: 10px;
+}
+
+.logo:hover {
+    border: 2px dashed olivedrab;
+    border-radius: 10px;
+}
+
+.button {
+    color: #000;
+    background: olivedrab;
+    text-decoration: none;
+    margin-top: 17px;
+}
+
+.button:hover {
+    color: olivedrab;
+    border-color: olivedrab;
+    background: #000;
+    border: 2px solid;
+}
+
+.article-button {
+    border: 1px solid black;
+}
+
+.article-button:hover {
+    color: olivedrab;
+    background: #000;
+}
+
+.m-t-2 {
+    margin-top: 2%;
+}

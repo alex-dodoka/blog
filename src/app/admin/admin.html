@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/custom-style.css">
+</head>
+<body>
+<nav class="navbar-default navbar-fixed-top header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-4 col-sm-5 pull-left">
+                    <a href="../../index.html"><img class="logo" src="../../assets/img/logo.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-5 pull-right text-right">
+                    <a class="button btn" type="button" href="../article/article.html">Articles</a>
+                    <a class="button btn" type="button" href="../about/about.html">About</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="well form-group">
+        <h1 class="text-center">Новая cтатья</h1>
+        <hr>
+        <div class="row">
+            <input type="text" class="form-control text-center " name="title" id="article_title" required
+                   placeholder="Название статьи.">
+        </div>
+        <div class="row">
+            <input type="text" class="form-control text-center" name="summary" id="article_summary" required
+                   placeholder="Краткое описание.">
+        </div>
+        <div class="row">
+        <textarea class="form-control text-center" name="content" id="article_content" required rows="5"
+                  placeholder="Напишите статью.">
+                    </textarea>
+        </div>
+        <div class="row">
+            <input type="text" class="form-control text-center" name="footer" id="article_footer" required
+                   placeholder="Заключение">
+        </div>
+        <div>
+            <input type="submit" class="btn button" onclick="onSubmit()">
+        </div>
+    </div>
+</div>
+
+<footer class="footer navbar-fixed-bottom row-fluid">
+    <div class="navbar-inner">
+        <div class="container">
+            <h4>&#169; 2017 Alex Dodoka.</h4>
+        </div>
+    </div>
+</footer>
+
+<script src="../../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./admin.js"></script>
+</body>
+</html>

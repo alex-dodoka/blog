@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--мета теги нужны для поисковых ботов-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--напиши тут описание для страницы корокое-->
+    <meta name="description" content="Personal blog of Alex Dodoka">
+    <!--напиши тут ключевые слова-->
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Alex Dodoka">
+
+    <title>Alex Dodoka</title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/custom-style.css" type="text/css" rel="stylesheet">
+</head>
+<body id="background-changes">
+
+<nav class="navbar-default navbar-fixed-top header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-4 col-sm-5 pull-left">
+                    <a href="index.html"><img class="logo" src="assets/img/logo.png"></a>
+                </div>
+                <div class="col-md-4 col-sm-5 pull-right text-right">
+                    <a class="button btn" type="button" href="index.html">Articles</a>
+                    <a class="button btn" type="button" href="app/about/about.html">About</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div>
+</div>
+
+<main class="container">
+    <div id="articles-block"></div>
+</main>
+
+<footer class="footer navbar-fixed-bottom row-fluid">
+    <div class="navbar-inner">
+        <div class="container">
+            <h4>&#169; 2017 Alex Dodoka.</h4>
+            <div class="pull-right text-uppercase">
+                <a href="app/admin/admin.html">Admin</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../bower_components/lodash/dist/lodash.core.min.js"></script>
+<script src="../bower_components/lodash/dist/lodash.min.js"></script>
+<script src="app/home/home.js"></script>
+<script src="app/service/articleService.js"></script>
+</body>
+</html>
