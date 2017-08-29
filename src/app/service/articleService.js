@@ -9,6 +9,8 @@ function getDataFromServer() {
         url: ARTICLE_URL,
         type: "GET"
     }).done(function (dataFromServer) {
+        console.log(dataFromServer);
+
         if (_.isEmpty(dataFromServer)) {
             addHtml(newArticle, noArticles());
         } else {
