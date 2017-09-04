@@ -10,17 +10,14 @@ const
         'url(./assets/img/bg03.jpg) repeat-y fixed'];
 
 $(document).ready(function () {
-
+    /**
+     *change background images
+     * */
+    changeBackgroundWithTimeout();
     /**
      *get articles from server
      * */
     getDataFromServer();
-
-    /**
-     *change background images
-     * */
-    changeBackgroundWithTimeout(); //Function will work endlessly
-
 });
 
 function changeBackgroundWithTimeout() {
