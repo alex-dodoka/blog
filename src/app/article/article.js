@@ -4,7 +4,7 @@ var GET_ARTICLE_URL = "http://localhost:8089/blog-rs/api/article/id/";
 
 $(document).ready(function () {
     var id = getUrlParameter('id');
-    getDataFromServer(GET_ARTICLE_URL + id);
+    getDataFromServer(GET_ARTICLE_URL.concat(id));
 });
 
 function getUrlParameter(sParam) {
@@ -32,12 +32,8 @@ function getDataFromServer(url) {
 }
 
 function interceptionResponse(article) {
-    for (var i = 0; i < article.length; i++) {
-        console.log(article);
-        var html = drawData(article[i]);
-        addHtml('article', html);
-        console.log(article[i]);
-    }
+    var html = drawData(article);
+    addHtml('article',html);
 }
 
 function drawData(modelData) {
