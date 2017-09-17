@@ -1,11 +1,16 @@
 'use strict';
 
 const
-    ARTICLE_URL = "http://localhost:8089/blog-rs/api/article";
+    CREATE_ARTICLE = "http://localhost:8089/blog-rs/api/article";
+
+
+$(document).ready(() => {
+    getListOfArticles();
+});
 
 
 function onSubmit() {
-    var newArticle = {
+    let newArticle = {
         title: $("#article_title").val(),
         summary: $("#article_summary").val(),
         content: $("#article_content").val(),
@@ -18,7 +23,7 @@ function onSubmit() {
 
 function sendDataToServer(article) {
     $.ajax({
-        url: ARTICLE_URL,
+        url: CREATE_ARTICLE,
         type: 'POST',
         data: JSON.stringify(article), //Converting object to JSON
         contentType: 'application/json',

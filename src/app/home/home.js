@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 function changeBackgroundWithTimeout() {
     setTimeout(function () {
-        var randomNumber = getRandomNumber(0, imagesForBackground.length - 1);
+        let randomNumber = getRandomNumber(0, imagesForBackground.length - 1);
         changeCss(changeColorBlockId, cssSelectorBackground, imagesForBackground[randomNumber]);
         changeBackgroundWithTimeout(); //Recursive call to itself
     }, timeoutForChangingPicture);

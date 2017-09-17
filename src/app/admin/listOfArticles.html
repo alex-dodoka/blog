@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Admin Panel</title>
+    <title>List Of Articles</title>
 
     <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../assets/css/custom-style.css">
@@ -25,30 +25,12 @@
 </nav>
 
 <div class="container">
-    <div class="well form-group">
-        <h1 class="text-center">Новая cтатья</h1>
-        <hr>
-        <div class="row">
-            <input type="text" class="form-control text-center " name="title" id="article_title" required
-                   placeholder="Название статьи.">
+
+    <main class="container">
+        <div id="articles-list">
         </div>
-        <div class="row">
-            <input type="text" class="form-control text-center" name="summary" id="article_summary" required
-                   placeholder="Краткое описание.">
-        </div>
-        <div class="row">
-        <textarea class="form-control" name="content" id="article_content" required rows="5"
-                  placeholder="Напишите статью.">
-                    </textarea>
-        </div>
-        <div class="row">
-            <input type="text" class="form-control text-center" name="footer" id="article_footer" required
-                   placeholder="Заключение">
-        </div>
-        <div>
-            <input type="submit" class="btn button" onclick="onSubmit()">
-        </div>
-    </div>
+    </main>
+
 </div>
 
 <footer class="footer navbar-fixed-bottom row-fluid">
