@@ -35,9 +35,9 @@ function getDataFromServer() {
             addHtml(newArticle, noArticles());
         } else {
             for (let i = 0; i < dataFromServer.length; i++) {
-                const title = dataFromServer[i].title || null;
-                const summary = dataFromServer[i].summary || null;
-                const id = dataFromServer[i].id || null;
+                let title = dataFromServer[i].title || null;
+                let summary = dataFromServer[i].summary || null;
+                let id = dataFromServer[i].id || null;
                 addHtml(newArticle, createArticlePreview(title, summary, id));
             }
         }
@@ -50,12 +50,13 @@ function getListOfArticles() {
         type: "GET"
     }).done((dataFromServer) => {
         console.log(dataFromServer);
+
         if (_.isEmpty(dataFromServer)) {
             addHtml(newArticle, noArticles());
         } else {
             for (let i = 0; i < dataFromServer.length; i++) {
-                const title = dataFromServer[i].title || null;
-                const id = dataFromServer[i].id || null;
+                let title = dataFromServer[i].title || null;
+                let id = dataFromServer[i].id || null;
                 addHtml(LIST_OF_ARTICLES, articleList(title, id));
             }
         }
@@ -72,7 +73,7 @@ function articleList(title, id) {
 }
 
 
-function createArticlePreview(title, summary, id) {
+function createArticlePreview(title, summary, id,tag) {
     return '<div class="jumbotron">' +
         '<h1 id="title">' + title + '</h1>' +
         '<p id="summary">' + summary + '</p>' +

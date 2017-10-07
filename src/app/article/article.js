@@ -1,15 +1,15 @@
 'use strict';
 
-var GET_ARTICLE_URL = "http://localhost:8089/blog-rs/api/article/id/";
+const GET_ARTICLE_URL = "http://localhost:8089/blog-rs/api/article/id/";
 
 $(document).ready(function () {
-    var id = getUrlParameter('id');
+    let id = getUrlParameter('id');
     getDataFromServer(GET_ARTICLE_URL.concat(id));
 });
 
 function getUrlParameter(sParam) {
 
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    let sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
         i;
@@ -32,7 +32,7 @@ function getDataFromServer(url) {
 }
 
 function interceptionResponse(article) {
-    var html = drawData(article);
+    let html = drawData(article);
     addHtml('article',html);
 }
 

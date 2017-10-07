@@ -16,8 +16,10 @@ function onSubmit() {
         content: $("#article_content").val(),
         footer: $("#article_footer").val(),
         language: "RU",
-        urlTitle: $("#article_title").val()
+        urlTitle: $("#article_title").val(),
+        tags: {tagTitle: $("#article_tag").val()}
     };
+    console.log(newArticle);
     sendDataToServer(newArticle);
 }
 
