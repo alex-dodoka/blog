@@ -14,7 +14,6 @@ function onSubmit() {
         createAt: new Date(),
         tagTitle: $("#article_tag").val()
     };
-    let tag = JSON.stringify(createTag);
     let newArticle = {
         title: $("#article_title").val(),
         summary: $("#article_summary").val(),
@@ -22,7 +21,7 @@ function onSubmit() {
         footer: $("#article_footer").val(),
         language: "RU",
         urlTitle: $("#article_title").val(),
-        tags: [tag]
+        tags: [createTag]
     };
     console.log(newArticle);
     sendDataToServer(newArticle);
